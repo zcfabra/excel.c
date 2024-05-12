@@ -1,3 +1,5 @@
+#define SEPARATOR ','
+
 #define ADD '+'
 #define SUB '-'
 #define MUL '*'
@@ -386,7 +388,7 @@ int main(int argc, char **argv)
     for (int i = 0; i < content_size + 1; i++)
     {
         char c = contents[i];
-        if (c == '|' || c == '\n' || c == '\0')
+        if (c == SEPARATOR || c == '\n' || c == '\0')
         {
 
             struct Cell cell = {
@@ -395,7 +397,7 @@ int main(int argc, char **argv)
                 .c = col,
             };
             cells[cell_count++] = cell;
-            if (c == '|')
+            if (c == SEPARATOR)
             {
                 col++;
             }
