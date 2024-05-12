@@ -115,7 +115,7 @@ char *slice_str(struct Parser *p)
 }
 char *copy_str(int l, int r, char *src_str)
 {
-    if (src_str[l] == '|' || src_str[l] == '\n')
+    if (src_str[l] == SEPARATOR || src_str[l] == '\n')
     {
         l++;
     }
